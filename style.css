@@ -4,6 +4,10 @@ body {
 	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
+.hidden	{
+	display: none;
+}
+
 #container {
 	width:1000px;
 	margin:auto;
@@ -13,6 +17,7 @@ body {
 	padding:4px;
 }
 
+/* Header */
 nav {
 	background-color:#325EB2;
 	text-align:center;
@@ -25,7 +30,7 @@ nav ul {
 	display:inline;
 }
 
-nav li {
+nav .headnav li {
 	margin:0;
 	padding:0;
 	list-style:none;
@@ -41,11 +46,60 @@ nav a {
 	font-weight:bold;
 }
 
+nav button {
+	display: none;
+}
+
+.dropdown {
+	display: none;
+}
+
+
+@media screen and (max-width: 900px){
+    nav {
+        width: 100vw;
+        display: flex;
+        justify-content: end;
+    }
+
+    nav .headnav {
+        display: none;
+    }
+
+    nav button {
+		display: block;
+		margin-right: 1rem;
+        width: 4rem;
+        height: 4rem;
+
+        background-image: url(images/menu_FILL0_wght400_GRAD0_opsz24.svg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+
+        background-color: inherit;
+        border: none;
+    }
+
+	.dropdown {
+		display: block;
+		width: 100vw;
+		background-color: grey;
+	}
+
+	.dropdown ul {
+		width: 100%;
+	}
+
+}
+
+
 nav a:hover,
 nav a:focus,
 nav a:active {
 	background-color:#213091;	
 }
+
+
 
 img.floatleft {
 	float:left;
