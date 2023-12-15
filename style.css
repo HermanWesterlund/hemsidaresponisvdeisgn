@@ -114,12 +114,16 @@ main {
 	box-sizing:border-box;
 }
 
-#topics-list {
-	float:right;
+@media screen and (min-width: 1000px) {
+
+	#topics-list {
 	width:300px;
+	float: right;
 	box-sizing:border-box;
 	padding:0 0 10px;
-	
+	vertical-align: top;
+	position: sticky;
+	}
 }
 
 footer {
